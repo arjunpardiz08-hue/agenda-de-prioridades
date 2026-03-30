@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Prioridades</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Minha Agenda de Prioridades</h1>
+            <p>Organize suas tarefas e hobbies por prioridade</p>
+        </header>
+
+        <div class="input-section">
+            <input 
+                type="text" 
+                id="taskInput" 
+                placeholder="Digite uma tarefa ou hobby..."
+                class="task-input"
+            >
+            
+            <select id="categorySelect" class="select-input">
+                <option value="tarefas">📌 Tarefas</option>
+                <option value="hobbies">🎮 Hobbies</option>
+            </select>
+
+            <select id="prioritySelect" class="select-input">
+                <option value="alta">🔴 Alta Prioridade</option>
+                <option value="media">🟡 Média Prioridade</option>
+                <option value="baixa">🟢 Baixa Prioridade</option>
+            </select>
+
+            <button id="addBtn" class="add-btn">Adicionar</button>
+        </div>
+
+        <div class="tasks-container">
+            <div class="priority-section">
+                <h2>🔴 Alta Prioridade</h2>
+                <ul id="altaPrioridade" class="tasks-list"></ul>
+            </div>
+
+            <div class="priority-section">
+                <h2>🟡 Média Prioridade</h2>
+                <ul id="mediaPrioridade" class="tasks-list"></ul>
+            </div>
+
+            <div class="priority-section">
+                <h2>🟢 Baixa Prioridade</h2>
+                <ul id="baixaPrioridade" class="tasks-list"></ul>
+            </div>
+        </div>
+
+        <div class="stats">
+            <p>Total de tarefas: <span id="totalTasks">0</span></p>
+            <p>Tarefas: <span id="totalTarefas">0</span> | Hobbies: <span id="totalHobbies">0</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
